@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas></canvas>
+  <script>
+    let canvas = document.querySelector("canvas")
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight
+    canvas.background = "rgb(250, 200, 0)"
+
+    let c = canvas.getContext("2d")
+    c.beginPath()
+    c.moveTo(100, 100)
+    c.lineTo(300, 300)
+    c.strokeStyle = "#000000"
+    c.stroke()
+
+    c.beginPath()
+    c.moveTo(100, 100)
+    c.lineTo(200, 100)
+    c.arc(100, 100, 100, 0, -Math.PI / 4, true);
+    c.lineTo(100, 100)
+    c.fillStyle = "#212121"
+    c.fill()
+  </script>
+</body>
+
+</html>
